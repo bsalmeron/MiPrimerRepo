@@ -59,3 +59,85 @@ print(vectroSeqBy)
 vectroSeqBy
 
 
+
+
+
+
+#DATAFRAMES (TEMA NUEVO)
+
+vectorPelicula
+
+names(vectorPelicula) = c("Peli1","Peli2","Peli3","Peli4")
+
+vectorPelicula
+
+iris
+trees
+warpbreaks
+
+
+#Convertir a dataframe
+is.data.frame(iris)
+iris = data.frame(iris)
+class(iris)
+
+iris
+View(iris)
+
+
+# Creamos vectores con los valores 
+
+nombre = c("Juan", "Margarita", "Ruben", "Daniel") 
+
+apellido = c("Sanchez", "Garcia", "Sancho", "Alfara") 
+
+fecha_nacimiento = as.Date(c("1976-06-14", "1974-05-07", "1958-12-25", "1983-09-19") )
+
+sexo = c("HOMBRE", "MUJER", "HOMBRE", "HOMBRE") 
+
+nro_hijos = c(1, 2, 3, 4) 
+
+#Creación con la función data.frame
+
+censo = data.frame(nombre,apellido,fecha_nacimiento,sexo,nro_hijos)
+class(censo)
+View(censo)
+
+#head()
+head(censo)
+#tail
+tail(censo)
+#str
+str(censo)
+
+#acceso a variables 
+View(data.frame(censo$sexo))
+censo$sexo=as.factor(censo$sexo)
+
+quantile(iris$Sepal.Length)
+
+ncol(censo)
+names(censo)
+View(censo[2:4])
+
+#Ejemplo 1
+
+#a
+
+results=c("A","A", "B", "B", "B", "B", "B","I","I","I","R","I","I","I","R","R",
+           "R","R","R","R","R","R","R","R","R", "M", "M", "M", "M", "M", "M",
+           "M", "M", "M", "M", "M", "M", "M","A","A")
+
+
+
+#frecuencia absoluta
+
+FrecuenciaAbsoluta = table(results)
+FrecuenciaAbsoluta
+
+#frecuencia relativa
+
+FrecuenciaRelativa = FrecuenciaAbsoluta/length(results)
+FrecuenciaRelativa
+
+ 
