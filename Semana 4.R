@@ -8,13 +8,9 @@ hist(x=Netflix$`IMDB Score`,
      col = "red")
 
 
-
-
-
-
-
-
-
-
-
 #Plots
+
+#Relación y correlación 
+
+plot(Netflix$Runtime,Netflix$`IMDB Score`)
+
