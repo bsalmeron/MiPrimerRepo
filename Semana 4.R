@@ -21,8 +21,16 @@ plot(as.factor(dataNetflixFiltrada$Genre))
 
 #Time based plot
 
-mis_fechas <- seq(as.Date("2005/1/1"), by = "month", length = 50  mi_factor <- factor(mtcars$cyl)
+mis_fechas <- seq(as.Date("2014/1/1"), by = "month", length = 50 ) 
+
+plot(mis_fechas,rnorm(50), type = "l")
+
+#Correlación 
                   
+View(trees)
+
+plot(select(trees,1:3))
 
 
+plot(mis_fechas,rnorm(50), type = "s", main = "Hola")
 
