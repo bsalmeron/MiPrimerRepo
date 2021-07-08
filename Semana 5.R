@@ -70,8 +70,9 @@ plot_ly(data = iris, x = ~Species, y = ~Petal.Length, color = ~Species, type = "
 
 
 
+ggplot(mpg, aes(hwy)) + geom_area(stat = "bin")
 
-
+              
 
 
 
