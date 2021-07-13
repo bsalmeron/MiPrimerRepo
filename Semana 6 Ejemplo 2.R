@@ -25,3 +25,24 @@ nuevas_edades = data.frame(edad= seq(10,30))
 #Paso 7 ejecutar prediccion 
 
 predict(Regresion,nuevas_edades)
+
+
+
+
+
+
+
+
+
+functionMia = function(Num){
+  paste("Hola"," ",+sqrt(Num))
+  
+}
+
+
+COVID_19=COVID_19_Encuesta_a_estudiantes
+
+COVID_19 = mutate(COVID_19, ColumnaNueva=functionMia(COVID_19$`Time spent on Online Class`))
+
+view(COVID_19)
+
