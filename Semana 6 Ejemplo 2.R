@@ -19,4 +19,9 @@ summary(Regresion)
 plot(grasas$edad, grasas$grasas, xlab = "Edad", ylab = "Grasas")
 abline(Regresion)
 
+#Paso 6 Prediccion (Test)
+nuevas_edades = data.frame(edad= seq(30,50))
+
+#Paso 7 ejecutar prediccion 
+
 
