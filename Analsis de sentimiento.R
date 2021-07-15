@@ -11,4 +11,28 @@ library(syuzhet)
 library(RColorBrewer)
 library(wordcloud)
 library(tm)
+#Paso 1 crear texto 
 
+texto_cadena ='Hola buenas tardes, muchas gracias 
+Estoy enojado 
+El servicio es muy malo 
+Hola  muy amable
+dependo de su servicio 
+gracias por su forma de atender 
+no tienen nada 
+muy enojado 
+fatal'
+
+
+#Paso 2 tokenizar
+texto_palabras <- get_tokens(texto_cadena)
+head(texto_palabras)
+length(texto_palabras)
+
+#Paso 3 crear oraciones test
+oraciones_vector <- get_sentences(texto_cadena)
+length(oraciones_vector)
+
+#Paso 4 Extracción de datos con el Léxico de Sentimientos NRC
+
+sentimientos_df <- get_nrc_sentiment(texto_palabras, lang="spanish")
