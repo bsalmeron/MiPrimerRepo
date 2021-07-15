@@ -1,0 +1,14 @@
+#Syuzhet
+
+# Instala los paquetes:
+install.packages("syuzhet")
+install.packages("RColorBrewer")
+install.packages("wordcloud")
+install.packages("tm")
+
+# Carga los paquetes
+library(syuzhet)
+library(RColorBrewer)
+library(wordcloud)
+library(tm)
+
