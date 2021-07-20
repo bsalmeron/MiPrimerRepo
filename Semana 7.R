@@ -3,9 +3,9 @@ datasets::trees
 data("trees")
 View(trees)
 
-#Ver correlaciones plot 
+#Ver correlaciones plot pairs
 pairs(trees)
-#Resumen corelacional 
+#Resumen corelacional cor
 cor(trees)
 
 #Regresión 
@@ -14,7 +14,7 @@ cor(trees)
 #es la variable respuesta o dependiente 
 #y cuál es la variable regresora o independiente (x). 
 
-#training
+#training lm(y ~ x, data)
 regresion = lm(Girth ~ Volume, trees)
 summary(regresion)
 
@@ -24,9 +24,9 @@ abline(regresion)
 #Test
 volumenTest = data.frame(Volume=seq(60,65))
 
-#Calculo predicciones 
+#Calculo predicciones  predict(lm,data_test)
  
 data= predict(regresion,volumenTest)
 
 
-plot(data)
+plot(data) 
