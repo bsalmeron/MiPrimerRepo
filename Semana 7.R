@@ -30,3 +30,34 @@ data= predict(regresion,volumenTest)
 
 
 plot(data) 
+
+
+
+#Funciones 
+
+#1200 = (1200*1.13)
+
+CalculoIvaCR = function(monto){
+  monto*1.13
+}
+
+
+CalculoIvaCR(as.integer(VentasClientes$Monto))
+
+dataTest = mutate(VentasClientes, IVA =CalculoIvaCR(as.integer(VentasClientes$Monto))
+ )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
