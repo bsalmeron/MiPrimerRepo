@@ -61,5 +61,10 @@ palabras_tristeza_orden <- sort(table(unlist(palabras_tristeza)), decreasing = T
 head(palabras_tristeza_orden, n = 12)
 
 
+# 1. Loading 
+data("USArrests")
+head(USArrests)
 
-write.csv(sentimientos_df, file = "analisis_sent_miau.csv", row.names = texto_palabras)
+
+View(USArrests)
+write.csv(USArrests, file = "analisis_sent_miau.csv", row.names = texto_palabras)
